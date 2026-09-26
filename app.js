@@ -157,7 +157,7 @@ function renderMissed(){
   app.innerHTML=`<section class="card">
     <h2>Missed concepts</h2>
     ${items.length?items.map(q=>`<div class="card"><span class="pill">Module ${q.module}</span><p><strong>${q.q}</strong></p><p class="muted">${q.explain}</p></div>`).join(""):"<p>No missed questions saved yet.</p>"}
-    ${items.length?'<button class="primary" onclick="startQuiz(\\'missed\\')">Retry missed questions</button>':""}
+    ${items.length?`<button class="primary" onclick="startQuiz('missed')">Retry missed questions</button>`:""}
   </section>`;
 }
 
